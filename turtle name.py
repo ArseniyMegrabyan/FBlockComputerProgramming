@@ -1,3 +1,4 @@
+from tkinter import RIGHT
 from turtle import *
 penup()
 # backward(500)
@@ -20,9 +21,23 @@ forward(120)
 pendown()
 left(90)
 forward(90)
-
-
-
-
-
+left(180)
+forward(40)
+left( 180 )
+circle(-60,90)
+penup()
+right(90)
+forward(110)
+left(90)
+forward(50)
+pendown()
+circle(30,180)
+circle(-30,210)
+penup()
+right(60)
+forward(110)
+left(90)
+forward(80)
+pendown()
+circle(90,-90)
 done()
