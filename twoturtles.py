@@ -1,0 +1,26 @@
+from turtle import Turtle
+
+arseniy = Turtle()
+artem = Turtle()
+arseniy.pencolor("red")
+artem.pencolor("blue")
+
+
+arseniy.left(90)
+artem.right(90)
+arseniy.forward(100)
+artem.forward(100)
+arseniy.left(90)
+artem.left(90)
+arseniy.forward(100)
+artem.forward(100)
+arseniy.left(90)
+artem.left(90)
+arseniy.forward(200)
+artem.forward(200)
+arseniy.left(90)
+arseniy.forward(100)
+artem.left(90)
+artem.forward(100)
+s = arseniy.getscreen()
+s.mainloop()
