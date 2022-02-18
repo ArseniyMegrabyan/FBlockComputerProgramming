@@ -3,7 +3,6 @@ from turtle import Turtle, speed
 
 
 ben = Turtle()
-racetrack = Turtle()
 screen = ben.getscreen()
 speed = 0
 angle = 10
@@ -25,10 +24,6 @@ def moveleft():
 def moveright():
     ben.right(angle)
 
-def startdrawing(x, y):
-    racetrack.goto(x,y)
-    racetrack.pendown()
-
 
 def stop():
     global speed
@@ -46,12 +41,18 @@ screen.onkeypress(decelerate, "s")
 screen.onkeypress(moveright,"d")
 screen.onkeypress(moveleft,"a")
 screen.onkeypress(stop, "space")
-racetrack.onclick(startdrawing)
-racetrack.ondrag(racetrack.goto)
-racetrack.onrelease(racetrack.penup)
+screen.onkeypress(accelerate,"Up")
+screen.onkeypress(decelerate, "Down")
+screen.onkeypress(moveright,"Right")
+screen.onkeypress(moveleft,"Left")
 
-# ##Draw racetrack
-# racetrack.forward()
+
+
+ben.pu()
+ben.goto(-265, 0)
+ben.left(90)
+ben.pd()
+
 
 while True:
     ben.forward(speed)
